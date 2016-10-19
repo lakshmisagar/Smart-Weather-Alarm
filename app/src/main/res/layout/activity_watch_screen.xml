@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_gloss">
+
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/settings_icon"
+        android:onClick="settingsButtonClick" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+    <ImageView
+        android:id="@+id/alarm"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/alarm_clock"/>
+    <TextView
+        android:id="@+id/alarmtime"
+        android:layout_toRightOf="@id/alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_centerVertical="true"
+        android:text="No alarm"
+        android:textStyle="italic"
+        android:textColor="@color/blueberry"
+        android:textSize="25dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activitytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textColor="@color/blueberry"
+            android:textSize="122dp" />
+
+        <TextView
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/hr"
+            android:text=":"
+            android:textColor="@color/blueberry"
+            android:textSize="122dp" />
+
+        <TextView
+            android:id="@+id/min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/dots"
+            android:text="00"
+            android:textColor="@color/blueberry"
+            android:textSize="122dp" />
+
+        <TextView
+            android:id="@+id/am_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="98dp"
+            android:layout_toRightOf="@id/min"
+            android:text="am"
+            android:textColor="@color/blueberry"
+            android:textSize="25dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:layout_above="@id/activitytime"
+        android:textColor="@color/blueberry"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/stopalarm"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/stopalarm"/>
+
+        <ImageView
+            android:id="@+id/weather1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/stopalarm"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/weather2"
+            android:layout_toRightOf="@id/weather1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/weather3"
+            android:layout_toRightOf="@id/weather2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/weather4"
+            android:layout_toRightOf="@id/weather3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
